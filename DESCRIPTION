@@ -1,0 +1,11 @@
+Package: RDisc
+Type: Package
+Title: Categorization of continous variables 
+Version: 0.1.0
+Author: Diego Mattozo
+Maintainer: Diego Mattozo <diegomattozo@live.com>
+Description: Categorization methods for continuous variables with support for
+    supervised and unsupervised methods.
+License: BSD
+Encoding: UTF-8
+LazyData: true
