@@ -30,22 +30,6 @@ UnsupervisedCategorizer <- R6Class("UnsupervisedCategorizer",
 SupervisedCategorizer <- R6Class("SupervisedCategorizer",
   inherit = Categorizer,
   public = list(
-    metric_ = NULL
-  ),
-  active = list(
-    #' @description
-    #' A setter/getter to define the metric to be maximized.
-    #' @param metric Must be a function that accepts a covariate, a response
-    #' variable and a vector of cutpoints to be applied to the explanatory variable
-    #' an returns a value.
-    #' @examples
-    #' categorizer <- SupervisedCategorizer$new()
-    #' categorizer$metric <- function(x, y, cutpoints) {
-    #'   x_new <- findInterval(x, cutpoints, rightmost.closed = T)
-    #'   chisq.test(x_new, y)$statistic
-    #' }
-    metric = function(metric) {
-      stop("You must implement the metric getter/setter.")
-    }
+    metric_fn = NULL
   )
 )

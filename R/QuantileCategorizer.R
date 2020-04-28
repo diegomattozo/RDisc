@@ -1,5 +1,3 @@
-#' Concrete implementation of a unsupervised categorizer using quantiles.
-#' @export
 QuantileCategorizer <- R6Class("QuantileCategorizer",
   inherit = UnsupervisedCategorizer,
   public = list(
@@ -18,7 +16,8 @@ QuantileCategorizer <- R6Class("QuantileCategorizer",
       invisible(self)
     },
     #' @description
-    #' @param x Apply the categorization.
+    #' Apply the categorization.
+    #' @param x Covariate.
     #' @return A categorized vector.
     transform = function(x) {
       assert(length(self$cutpoints) > 0)
